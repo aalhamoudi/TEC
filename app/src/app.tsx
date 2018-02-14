@@ -1,22 +1,26 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
+import { Loadable } from 'react-loadable';
 
 
+import Portfolio from './Views/Portfolio';
+import Dashboard from './Views/Dashboard';
 
-import Portfolio from './views/Portfolio'
-import Dashboard from './views/Dashboard'
+import Auth from './Services/Auth'
 
 export default class App extends React.Component<{}, {}> {
     constructor(props, context) {
         super(props, context);
-        
     }
+    
+
     render() {
         return (
             <div>
                 <Route exact path='/' component={Portfolio} />
-                <Route exact path='/dashboard' component={Dashboard} />
+                <Route path='/dashboard' component={Dashboard} />
             </div>
         )
+        
     }
 }

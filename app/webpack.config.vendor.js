@@ -18,9 +18,10 @@ module.exports = (env) => {
         entry: {
             vendor: [
                 'bootstrap',
+                'material-ui',
                 'materialize-css',
                 'bootstrap/dist/css/bootstrap.css',
-                'materialize-css/dist/css/materialize.css',
+                'grommet/scss/vanilla/index.scss',
                 'event-source-polyfill',
                 'history',
                 'react',

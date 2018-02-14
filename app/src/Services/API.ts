@@ -1,5 +1,5 @@
 ﻿
-export class Rest {
+export class API {
     accessToken: string;
 
     constructor(accessToken: string) {

@@ -1,8 +1,7 @@
 ﻿import { observable, computed, ObservableMap } from 'mobx'
-import { Collection } from '../../data/Collection';
+import { Collection } from '../../Services/Data/Collection';
 
-import { Auth } from '../../services/auth'
-import { Rest } from '../../services/rest'
+import Auth from '../../Services/Auth'
 
 import Item from '../../models/Item'
 

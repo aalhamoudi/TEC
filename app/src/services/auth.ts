@@ -1,19 +1,52 @@
-﻿import * as firebase from 'firebase'
+﻿import * as firebase from 'firebase';
+import { User as Account } from 'firebase/auth';
+import { DocumentReference, DocumentSnapshot } from 'firebase/firestore';
 
-export class Auth {
-    auth = firebase.auth();
+import { Collection, Document } from './Data'
 
-    constructor(email: string, password: string) {
+import User from '../Models/User';
 
+export default abstract class Auth {
+    static auth;
+    static db;
+
+    static account: Account;
+    static user: User;
+
+    static init(): Promise<void> {
+        return new Promise<void>(resolve => {
+            Auth.auth = firebase.auth();
+            Auth.db = firebase.firestore();
+    
+            Auth.auth.onAuthStateChanged(account => {
+                if (account) {
+                    Auth.account = account;
+                    Auth.db.collection("Users").doc(account.uid).get().then((doc: DocumentSnapshot) => {
+                        if (doc.exists)
+                            Auth.user = doc.data();
+                        resolve();
+                    });
+                }
+                else {
+                    Auth.account = Auth.user = undefined;
+                    resolve();                    
+                }
+            });
+        });
+        
         
     }
 
-    signUp(name: string) {
+    static signUp(email: string, password: string) {
 
     }
 
-    signIn()  {
+    static signIn(email: string, password: string)  {
 
 
+    }
+
+    static get isSignedIn() : boolean {
+        return Auth.account === undefined? false : true;
     }
 }

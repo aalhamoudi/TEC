@@ -11,19 +11,21 @@ module.exports = (env) => {
         stats: { modules: false },
         resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
         entry: {
-            'app': './src/boot.tsx'
+            'app': './src/Boot.tsx'
         },
         module: {
             rules: [
                 { test: /\.tsx?$/, include: path.resolve(__dirname, "./"), loaders: ['react-hot-loader/webpack', 'awesome-typescript-loader?silent=true'] },
                 { test: /\.css$/, use: ExtractTextPlugin.extract({ use: isDevBuild ? 'css-loader' : 'css-loader?minimize' }) },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
-                { test: /\.(graphql|gql)$/, exclude: /node_modules/, loader: 'graphql-tag/loader'}
+                { test: /\.(graphql|gql)$/, exclude: /node_modules/, loader: 'graphql-tag/loader'},
+                { test: /\.scss$/, use: [{ loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader', options: {includePaths: ['./node_modules']}}]}
             ]
         },
         output: {
             path: path.join(__dirname, bundleOutputDir),
             filename: '[name].js',
+            chunkFilename: '[name].js',
             publicPath: '/' // Webpack dev middleware, if enabled, handles requests for this URL prefix
         },
         plugins: [
@@ -47,14 +49,10 @@ module.exports = (env) => {
                 ])
         ,
         devServer: {
-            hot: true,
-            // enable HMR on the server
-
+            hot: false,
             contentBase: path.resolve(__dirname, 'dist'),
-            // match the output path
-
-            publicPath: '/'
-            // match the output `publicPath`
+            publicPath: '/',
+            historyApiFallback: true
         }
     }
 };

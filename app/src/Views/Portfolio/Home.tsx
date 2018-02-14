@@ -5,22 +5,23 @@ import Parallax from 'react-springy-parallax';
 import FirebaseUI from 'firebaseui';
 import * as firebase from 'firebase';
 
-import { Stores, PortfolioStore } from '../../stores'
+import { Stores, PortfolioStore } from '../../Stores'
 
-import { Auth } from '../../services/auth'
+import Auth from '../../Services/Auth'
 
 import { isObservable } from 'mobx';
 
-const stars = require("../../images/stars.svg")
-const cloud = require("../../images/cloud.svg")
-
+//const stars = require("../../Images/stars.svg")
+//const cloud = require("../../Images/cloud.svg")
+const stars = "";
+const cloud = "";
 
 type PortfolioProps = PortfolioStore & RouteComponentProps<{}>;
 
 
 @inject((stores: Stores) => stores.portfolioStore)
 @observer
-export default class PortfolioHome extends React.Component<PortfolioProps, {}> {
+export default class Home extends React.Component<PortfolioProps, {}> {
     componentDidMount() {
         console.log(this.props.items)
         

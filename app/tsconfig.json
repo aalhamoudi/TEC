@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "moduleResolution": "node",
+    "module": "esnext",
     "target": "es6",
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "experimentalDecorators": true,
     "sourceMap": true,
@@ -13,7 +16,6 @@
       // Fix "Duplicate identifier" errors caused by multiple dependencies fetching their own copies of type definitions.
       // We tell TypeScript which type definitions module to treat as the canonical one (instead of combining all of them).
       "history": ["./node_modules/@types/history/index"],
-      "redux": ["./node_modules/@types/redux/index"],
       "react": ["./node_modules/@types/react/index"]
     }
   },

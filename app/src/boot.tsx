@@ -2,6 +2,7 @@ import './styles/app.css';
 import 'bootstrap';
 import 'font-awesome/css/font-awesome.css';
 import 'react-hot-loader/patch';
+import 'grommet/scss/vanilla/index.scss';
 
 
 import * as React from 'react';
@@ -14,25 +15,29 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 import { initFirestorter } from 'firestorter';
 
-import App from './app';
-import { firebaseConfig } from './config';
+import App from './App';
+import { firebaseConfig } from './Config';
 
 firebase.initializeApp(firebaseConfig);
-initFirestorter({firebase: firebase})
+
+import Auth from './Services/Auth'
 
 import stores from './stores';
 
 function renderApp() {
-    ReactDOM.render(
-        <AppContainer>
-            <Provider {...stores()}>
-                <Router>
-                    <App />
-                </Router>
-            </Provider>
-        </AppContainer>,
-        document.getElementById('app')
-    );
+    Auth.init().then(() => {
+        ReactDOM.render(
+            <AppContainer>
+                <Provider {...stores()}>
+                    <Router>
+                        <App />
+                    </Router>
+                </Provider>
+            </AppContainer>,
+            document.getElementById('app')
+        );
+    });
+    
 }
 
 renderApp();
