@@ -38,12 +38,10 @@ export default abstract class Auth {
     }
 
     static signUp(email: string, password: string) {
-
     }
 
     static signIn(email: string, password: string)  {
-
-
+        Auth.auth.signInWithEmailAndPassword(email, password)
     }
 
     static get isSignedIn() : boolean {

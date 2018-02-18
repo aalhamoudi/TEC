@@ -8,6 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "experimentalDecorators": true,
+    "allowUnusedLabels": true,
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "lib": ["es6", "dom"],

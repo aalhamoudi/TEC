@@ -20,7 +20,7 @@ export default class Home extends React.Component<DashboardProps, {}> {
 
     public render() {
         return (
-            <Link to="/dashboard/projects/1">Projects</Link>
+            <Link to="/dashboard/projects/1">Project 1</Link>
         )
     }
 }

@@ -23,7 +23,9 @@ module.exports = (env) => {
                 'bootstrap/dist/css/bootstrap.css',
                 'grommet/scss/vanilla/index.scss',
                 'event-source-polyfill',
+                '@blueprint/core',
                 'history',
+                'firebase',
                 'react',
                 'react-dom',
                 'react-router-dom',
@@ -37,7 +39,8 @@ module.exports = (env) => {
         module: {
             rules: [
                 { test: /\.css(\?|$)/, use: extractCSS.extract({ use: isDevBuild ? 'css-loader' : 'css-loader?minimize' }) },
-                { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' }
+                { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' },
+                { test: /\.scss$/, use: [{ loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader', options: {includePaths: ['./node_modules']}}]}
             ]
         },
         plugins: [

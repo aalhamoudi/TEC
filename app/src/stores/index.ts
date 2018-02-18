@@ -1,16 +1,19 @@
 import { PortfolioStore } from './Portfolio/PortfolioStore'
 import { DashboardStore } from './Dashboard/DashboardStore'
+import { AccountStore } from './Account/AccountStore'
 
-export { PortfolioStore, DashboardStore }
+export { PortfolioStore, DashboardStore, AccountStore }
 
 export class Stores {
     portfolioStore: PortfolioStore;
-    dashboardStore: DashboardStore
+    dashboardStore: DashboardStore;
+    accountStore: AccountStore;
 }
 
 export default () : Stores => {
     return {
         portfolioStore: new PortfolioStore(),
-        dashboardStore: new DashboardStore()
+        dashboardStore: new DashboardStore(),
+        accountStore: new AccountStore()
     }
 };

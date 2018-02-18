@@ -8,6 +8,7 @@
   "dependencies": {
     "@blueprintjs/core": "^1.35.0",
     "amazon-cognito-identity-js": "^1.29.0",
+    "animate-css-styled-components": "^0.0.20",
     "animate.css": "^3.5.2",
     "apollo-client": "^2.2.1",
     "aws-amplify": "^0.1.x",
@@ -25,6 +26,7 @@
     "firebaseui": "^2.6.0",
     "firestorter": "^0.9.3",
     "font-awesome": "^4.7.0",
+    "font-loader": "^0.1.2",
     "graphql": "^0.12.3",
     "graphql-tag": "^2.6.1",
     "grommet": "^1.10.1",
@@ -41,6 +43,7 @@
     "react-apollo-decorators": "^1.4.26",
     "react-dom": "^16.2.0",
     "react-flexbox": "^3.1.4",
+    "react-jss": "^8.3.3",
     "react-loadable": "^5.3.1",
     "react-responsive": "^4.0.3",
     "react-router": "^4.2.0",
@@ -48,9 +51,11 @@
     "react-springy-parallax": "^1.2.0",
     "rxjs": "^5.5.6",
     "sass-loader": "^6.0.6",
+    "styled-components": "^3.1.6",
     "ts-loader": "^3.5.0",
     "tslib": "^1.9.0",
-    "typed-graphql": "^1.0.2"
+    "typed-graphql": "^1.0.2",
+    "typeface-roboto": "^0.0.54"
   },
   "devDependencies": {
     "@types/history": "4.5.1",
