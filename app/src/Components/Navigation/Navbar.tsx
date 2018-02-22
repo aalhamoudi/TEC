@@ -1,100 +1,94 @@
-import * as React from 'react';
+import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
-import injectSheet from 'react-jss';
-import Box from 'grommet/components/Box';
-import Typography from 'material-ui/Typography';
 
-const styles = theme => ({
-    navbar: {
+import Box, { BoxItem } from '../Layout/Box';
+import Typography from '../Content/Typography';
+import { Styled, Style, StyledComponent } from '../Styles/Styled'
+
+interface NavBarProps {title: string, fixed?: boolean};
+@Styled<NavBarProps>()
+export class NavBar extends StyledComponent<NavBarProps, {}> {
+    static style = (theme, props): Style => ({
         position: 'fixed',
         width: '100%',
-        height: '50px',
-        'background-color': theme.navbar.backgroundColor,
-        'box-shadow': theme.navbar.boxShadow
-    },
-    navcontainer: {
-        height: '100%'
-    },
-    navgroup: {
-        height: '100%'
-    },
-    navlink: {
-        color: theme.navlink.color,
-        margin: theme.navlink.margin,
-        '&:hover': {
-            color: theme.navlink.hoverColor,
-            'text-decoration': 'none'
+        height: theme.Component.height,
+        top: 0,
+        backgroundColor: theme.Component.backgroundColor,
+        boxShadow: theme.Component.boxShadow
+    });
+    render() {
+        return (
+            <Box tag='nav' direction="row" align="center">
+                <NavBrand>{this.props.title}</NavBrand>
+                <NavGroup justify='flex-end'>
+                    {React.Children.map(this.props.children, (child, index) => {
+                        let link = child as any;
+                        return <NavLink title={link.props.title} path={link.props.path} icon={link.props.icon} />
+                    })}
+                </NavGroup>
+            </Box>
+        );
+    }
+}
+
+export class NavBrand extends StyledComponent<{}, {}> {
+    render() {
+        return (
+            <NavGroup grow={0.1}>
+                <Typography variant="title">{this.props.children}</Typography>
+            </NavGroup>
+        );
+    }
+}
+
+interface NavGroupProps {grow?: number, justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'};
+@Styled<NavGroupProps>()
+export class NavGroup extends StyledComponent<NavGroupProps, {}> {
+    static style = (theme, props): Style => ({
+        height: '100%',
+        flexGrow: props.grow || 1
+    });
+
+    render() {
+        return (
+            <Box direction='row' justify={this.props.justify || 'center'} align='center'>
+                {this.props.children}
+            </Box>
+        );
+    }
+}
+
+interface NavLinkProps {classes?: any, title: string, path: string, icon?: React.ReactType};
+@Styled<NavLinkProps>()
+export class NavLink extends StyledComponent<NavLinkProps, {}> {
+    static style = (theme, props): Style => ({
+        color: theme.Component.color,
+        margin: theme.Component.margin,
+        hover: {
+            color: theme.Component.hoverColor,
+            textDecoration: 'none'
         }
-    },
-    navlink_active: {
-        'text-decoration': theme.navlink.active.textDecoration
-    }
-});
+    });
 
-@injectSheet(styles)
-export class Navbar extends React.Component<{classes?: any, title: string, fixed?: boolean}, {}> {
     render() {
-        return (
-            <nav className={this.props.classes.navbar}>
-                <Box className={this.props.classes.navcontainer} direction='row' align='center'>
-                    <NavbarGroup flex={0.1}>
-                        <Typography variant="title">{this.props.title}</Typography>
-                    </NavbarGroup>
-                    <NavbarGroup justify='end'>
-                        {React.Children.map(this.props.children, (child, index) => {
-                            let link = child as any;
-                            return <NavLink title={link.props.title} path={link.props.path} icon={link.props.icon} />
-                        })}
-                    </NavbarGroup>
-                    </Box>
-            </nav>
-        );
+        return <Link exact to={this.props.path} activeStyle={{textDecoration: 'underline !important'}}>{this.props.title}</Link>
     }
 }
 
-@injectSheet(styles)
-export class NavbarGroup extends React.Component<{classes?: any, flex?: number, justify?: string}, {}> {
+export class NavBarNavigation extends StyledComponent<{classes?: any, title: string, fixed?: boolean}, {}> {
     render() {
         return (
-            <Box className={this.props.classes.navgroup} style={{flexGrow: this.props.flex}} direction='row' flex='grow' justify={this.props.justify || 'center'} align='center' pad='medium'>
-                {this.props.children}
-            </Box>
-        );
-    }
-}
-
-@injectSheet(styles)
-export class NavbarDivider extends React.Component<{classes?: any, flex?: number}, {}> {
-    render() {
-        return (
-            <Box className={this.props.classes.navgroup} style={{flexGrow: this.props.flex}} direction='row' flex='grow' justify='around' align='center'>
-                {this.props.children}
-            </Box>
-        );
-    }
-}
-
-@injectSheet(styles)
-export class NavLink extends React.Component<{classes?: any, title: string, path: string, icon?: React.ReactType}, {}> {
-    render() {
-        return <Link exact to={this.props.path} className={this.props.classes.navlink} activeClassName={this.props.classes.navlink_active}>{this.props.title}</Link>
-    }
-}
-
-export class NavbarNavigation extends React.Component<{classes?: any, title: string, fixed?: boolean}, {}> {
-    render() {
-        return (
-            <div>
-                <Navbar {...this.props}>
+            <Box direction='column'>
+                <NavBar {...this.props}>
                     {React.Children.map(this.props.children, (child, index) => {
                         let page = child as any;
                         return <NavLink title={page.props.title} path={page.props.path} />
                     })}
-                </Navbar>
-                <div style={{paddingTop: 50, height: '100%'}}>
+                </NavBar>
+                <div style={{marginTop: 58}}>
                     {this.props.children}
                 </div>
-            </div>
+            </Box>
             
         );
     }

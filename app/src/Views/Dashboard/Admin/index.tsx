@@ -20,16 +20,16 @@ import SettingsIcon from 'material-ui-icons/Settings';
 import Home from './Home'
 import Overview from './Overview'
 
-import { IconNavigation, IconBar, NavSection } from '../../../Components';
+import { IconNavigation, IconBar, NavLink } from '../../../Components';
 
-const theme = {};
+import Theme from '../Theme'
 
 export default (props) => (
     <Page path="/dashboard" title="dashboard">
         <Switch>
             <Page exact path='/dashboard' title="Dashboard" component={Home} />
-            <Area path='/dashboard/projects/:id' title="Projects" nav={IconNavigation} theme={theme}>
-                <Page path='/dashboard/projects/:id/' title="Overview" icon={AccountCircle} component={Overview} />   
+            <Area path='/dashboard/projects/:id' title="Projects" nav={IconNavigation} theme={Theme}>
+                <Page path='/dashboard/projects/' title="Overview" icon={AccountCircle} component={Overview} />   
             </Area>
         </Switch>
     </Page>

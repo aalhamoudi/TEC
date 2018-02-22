@@ -9,6 +9,7 @@
     "jsx": "react",
     "experimentalDecorators": true,
     "allowUnusedLabels": true,
+    "suppressImplicitAnyIndexErrors": true,
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "lib": ["es6", "dom"],

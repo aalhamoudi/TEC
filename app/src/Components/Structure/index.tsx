@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch, RouteComponentProps } from 'react-router-dom';
-import { ThemeProvider } from 'react-jss';
 import { ZoomIn } from 'animate-css-styled-components';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 
 import { NavLink } from '../Navigation';
+import ThemeProvider from '../Styles/ThemeProvider';
 
 export class App extends React.Component<{}, {}> {
     render() {
         return (
             <Router>
-                <div>{this.props.children}</div>
+                <div>{this.props.children}</div>            
             </Router>
         );
     };

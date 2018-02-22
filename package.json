@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "radium": "^0.22.0"
+  }
+}

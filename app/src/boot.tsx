@@ -1,5 +1,4 @@
 import './styles/app.css';
-import 'bootstrap';
 import 'font-awesome/css/font-awesome.css';
 import 'react-hot-loader/patch';
 import 'grommet/scss/vanilla/index.scss';

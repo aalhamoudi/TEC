@@ -5,10 +5,10 @@ import { Area, Page } from '../../../Components/Structure';
 
 import Home from './Home'
 
-const theme = {};
+import Theme from '../Theme'
 
 export default (props) => (
-    <Area path="/dashboard" title="Dashboard" theme={theme} {...props}>
+    <Area path="/dashboard" title="Dashboard" theme={Theme} {...props}>
         <Page exact path='/dashboard' title="Dashboard" component={Home} />
     </Area>
 );
