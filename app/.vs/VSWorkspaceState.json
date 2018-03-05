@@ -3,9 +3,14 @@
     "",
     "\\src",
     "\\src\\Components",
-    "\\src\\Components\\Content",
-    "\\src\\Components\\Styles"
+    "\\src\\Components\\Auxiliary",
+    "\\src\\Components\\Data",
+    "\\src\\Components\\Layout",
+    "\\src\\Components\\Navigation",
+    "\\src\\Components\\Structure",
+    "\\src\\Components\\Utility",
+    "\\src\\Components\\Utility\\Animations"
   ],
-  "SelectedNode": "\\src\\Components\\Content\\Typography.tsx",
+  "SelectedNode": "\\src\\Components\\Layout\\Grid.tsx",
   "PreviewInSolutionExplorer": false
 }

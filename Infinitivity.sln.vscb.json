@@ -1,0 +1,22 @@
+{
+    "vscb_version": "1.0",
+    "description": "Infinitivity Commands",
+    "verbose": true,
+  "macros": {
+    "BaseDir": "$(SolutionDir)",
+    "AppDir": "$(BaseDir)App\\"
+  },
+    "commands": [
+      {
+        "cmdname": "deploysite",
+        "title": "Deploy Site",
+        "description": "Deploy site to Firebase Hosting",
+        "cwd": "$(SolutionDir)",
+        "filename": "cmd.exe",
+        "arguments": "/C firebase deploy --only hosting",
+        "async": true,
+        "key1": "F5",
+        "mod1": "CTRL SHIFT"
+      }
+    ]
+  }
