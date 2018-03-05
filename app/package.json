@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@blueprintjs/core": "^1.35.0",
+    "@firebase/app-types": "^0.1.2",
+    "@types/web-animations-js": "^2.2.6",
     "animate-css-styled-components": "^0.0.20",
     "animate.css": "^3.5.2",
     "firebase": "^4.9.1",
@@ -19,19 +21,24 @@
     "mobx": "^3.4.1",
     "mobx-react": "^4.3.5",
     "node-sass": "^4.7.2",
+    "prop-types": "^15.6.0",
     "radium": "^0.22.0",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
+    "react-addons-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
     "react-flexbox": "^3.1.4",
     "react-jss": "^8.3.3",
     "react-loadable": "^5.3.1",
+    "react-popper": "^0.8.2",
     "react-responsive": "^4.0.4",
     "react-router-dom": "^4.2.2",
     "react-springy-parallax": "^1.2.0",
     "rxjs": "^5.5.6",
+    "stickybits": "^3.1.1",
     "styled-components": "^3.1.6",
-    "typeface-roboto": "^0.0.54"
+    "typeface-roboto": "^0.0.54",
+    "web-animations-js": "^2.3.1"
   },
   "devDependencies": {
     "@types/history": "4.5.1",
@@ -58,7 +65,7 @@
     "tslib": "^1.9.0",
     "typescript": "^2.7.2",
     "url-loader": "0.5.8",
-    "webpack": "2.5.1",
+    "webpack": "3.11.0",
     "webpack-dev-server": "^2.4.5",
     "webpack-hot-middleware": "2.18.0"
   }

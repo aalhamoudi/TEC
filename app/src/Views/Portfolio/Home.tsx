@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { inject, observer } from 'mobx-react'
 import FirebaseUI from 'firebaseui';
@@ -8,12 +9,13 @@ import { Stores, PortfolioStore } from '../../Stores'
 
 import Auth from '../../Services/Auth'
 
-import { Article } from '../../Components';
+import { Article, Layer } from '../../Components';
 
-//const stars = require("../../Images/stars.svg")
-//const cloud = require("../../Images/cloud.svg")
-const stars = "";
-const cloud = "";
+import Modal from '../../Components/Auxiliary/Modal';
+import Tooltip from '../../Components/Auxiliary/Tooltip';
+import Sticky from '../../Components/Utility/Sticky';
+
+import Spring from '../../Components/Utility/Animations/Spring';
 
 type PortfolioProps = PortfolioStore & RouteComponentProps<{}>;
 
@@ -22,14 +24,17 @@ type PortfolioProps = PortfolioStore & RouteComponentProps<{}>;
 @observer
 export default class Home extends React.Component<PortfolioProps, {}> {
     componentDidMount() {
+        //let spring = new Spring(0, 100, 180, 12, 10);
+        //console.log(spring.values);
     }
 
     public render() {
         return (
             <Article>
-                <Link to="/dashboard">Dashboard</Link>
+                <Layer>
+                    <div style={{height: 1500}}>Home</div>
+              </Layer>
             </Article>
         )
     }
 }
-

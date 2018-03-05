@@ -3,7 +3,9 @@ import 'font-awesome/css/font-awesome.css';
 import 'react-hot-loader/patch';
 import 'grommet/scss/vanilla/index.scss';
 import '@blueprintjs/core/dist/blueprint.css';
-import 'typeface-roboto'
+import 'typeface-roboto';
+import 'web-animations-js/web-animations.min';
+//import 'stickybits/dist/stickybits';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -34,7 +36,7 @@ function renderApp() {
             document.getElementById('app')
         );
     });
-    
+
 }
 
 renderApp();

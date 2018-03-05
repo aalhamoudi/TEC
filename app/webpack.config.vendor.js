@@ -17,23 +17,20 @@ module.exports = (env) => {
         },
         entry: {
             vendor: [
-                'bootstrap',
                 'material-ui',
-                'materialize-css',
-                'bootstrap/dist/css/bootstrap.css',
                 'grommet/scss/vanilla/index.scss',
                 'event-source-polyfill',
-                '@blueprint/core',
+                '@blueprintjs/core',
                 'history',
                 'firebase',
                 'react',
                 'react-dom',
                 'react-router-dom',
                 'mobx-react',
-                'react-materialize',
-                'jquery',
                 'font-awesome/css/font-awesome.css',
-                'animate.css/animate.min.css'
+                'animate.css/animate.min.css',
+                'web-animations-js/web-animations.min',
+                'stickybits/dist/stickybits'
             ],
         },
         module: {

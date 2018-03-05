@@ -13,13 +13,22 @@ export abstract class StyledComponent<P, S> extends React.Component<P, S> {
         theme: PropsTypes.object
     };
     static style = (theme, props): Style => ({});
+
+    componentWillMount() {}
+    componentDidMount() {}
 }
 
-export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?: string[]) {
-    return (Component: React.ComponentClass<any>) => {
-        return class extends StyledComponent<ComponentProps, {focus: boolean, hover: boolean, active: boolean}> {
-            static style = (Component as any).style;
+interface StyledState {
+    focus: boolean,
+    hover: boolean,
+    active: boolean
+}
 
+export function Styled<ComponentProps>(tag?: string | React.ReactType, props?: (props) => any) {
+    return (Component: React.ComponentClass<any>) => {
+        return class extends StyledComponent<ComponentProps, StyledState & any> {
+            static style = (Component as any).style;
+            static defaultProps: Partial<ComponentProps>;
             theme;
 
             normalStyle: any;
@@ -51,9 +60,27 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?:
                         delete this.normalStyle.active;
                     }
                 }
-                
+
             }
-            
+
+            componentWillUpdate(nextProps, nextState) {
+                this.normalStyle = (Component as any).style(this.theme, nextProps);
+                if (this.normalStyle) {
+                    if (this.normalStyle.focus) {
+                        this.focusStyle = this.normalStyle.focus;
+                        delete this.normalStyle.focus;
+                    }
+                    if (this.normalStyle.hover) {
+                        this.hoverStyle = this.normalStyle.hover;
+                        delete this.normalStyle.hover;
+                    }
+                    if (this.normalStyle.active) {
+                        this.activeStyle = this.normalStyle.active;
+                        delete this.normalStyle.active;
+                    }
+                }
+            }
+
             onFocus = () => {
                 this.setState({
                     focus: true,
@@ -75,7 +102,7 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?:
                     focus: this.state.focus,
                     hover: true,
                     active: this.state.active
-                });            
+                });
             }
 
             onMouseLeave = () => {
@@ -83,7 +110,7 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?:
                     focus: this.state.focus,
                     hover: false,
                     active: this.state.active
-                });   
+                });
             }
 
             onMouseDown = () => {
@@ -91,7 +118,7 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?:
                     focus: this.state.focus,
                     hover: this.state.hover,
                     active: true
-                });   
+                });
             }
 
             onMouseUp = () => {
@@ -99,7 +126,7 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?:
                     focus: this.state.focus,
                     hover: this.state.hover,
                     active: false
-                });   
+                });
             }
 
             getStyle() {
@@ -120,19 +147,16 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, exclude?:
             render() {
                 const Tag = tag || (this.props as any).tag || 'div';
 
-                let containerProps = Object.assign({}, this.props);
-                if (exclude) exclude.forEach(prop => delete containerProps[prop]);
-
+                let containerProps = props && props(this.props);
                 let componentProps = Object.assign({}, this.props, {theme: this.theme});
                 return (
-                    <Tag style={this.getStyle()}
+                    <Tag style={this.getStyle()} {...containerProps}
                         onMouseDown={this.activeStyle && this.onMouseDown.bind(this)}
                         onMouseUp={this.activeStyle && this.onMouseUp.bind(this)}
-                        onMouseEnter={this.hoverStyle && this.onMouseEnter.bind(this)} 
+                        onMouseEnter={this.hoverStyle && this.onMouseEnter.bind(this)}
                         onMouseLeave={this.hoverStyle && this.onMouseLeave.bind(this)}
                         onFocus={this.focusStyle && this.onFocus.bind(this)}
                         onBlur={this.focusStyle && this.onBlur.bind(this)}
-                        {...containerProps}
                     >
                         <Component {...componentProps} />
                     </Tag>

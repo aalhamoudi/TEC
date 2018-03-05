@@ -10,11 +10,6 @@ import Auth from '../../Services/Auth'
 
 import { Article } from '../../Components';
 
-//const stars = require("../../Images/stars.svg")
-//const cloud = require("../../Images/cloud.svg")
-const stars = "";
-const cloud = "";
-
 type PortfolioProps = PortfolioStore & RouteComponentProps<{}>;
 
 

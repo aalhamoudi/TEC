@@ -34,7 +34,7 @@ export class NavGroup extends React.Component<{ fill?: boolean, style?: any }, {
 }
 
 interface NavLinkProps {to: string, icon: React.ReactType, title?: string, activeStyle?: any};
-@Styled<NavLinkProps>(Link, ['icon'])
+@Styled<NavLinkProps>(Link)
 export class NavLink extends React.Component<NavLinkProps, {}> {
     static style = (theme, props): Style => ({
         height: 64,

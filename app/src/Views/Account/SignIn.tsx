@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { Link, Redirect, RouteComponentProps } from 'react-router-dom';
 import { inject, observer } from 'mobx-react'
 import * as firebase from 'firebase';
 
@@ -21,7 +21,7 @@ export default class SignIn extends React.Component<AccountProps, {}> {
 
     public render() {
         return (
-            <div>Account</div>
+            <Redirect to="/portfolio" />
         )
     }
 }

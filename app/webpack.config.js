@@ -17,8 +17,7 @@ module.exports = (env) => {
             rules: [
                 { test: /\.tsx?$/, include: path.resolve(__dirname, "./"), loaders: ['react-hot-loader/webpack', 'awesome-typescript-loader?silent=true'] },
                 { test: /\.css$/, use: ExtractTextPlugin.extract({ use: [{loader: isDevBuild ? 'css-loader' : 'css-loader?minimize'}, {loader: 'font-loader'}] }) },
-                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
-                { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+                { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf)$/, loader: 'url-loader?limit=100000' },
                 { test: /\.(graphql|gql)$/, exclude: /node_modules/, loader: 'graphql-tag/loader'},
                 { test: /\.scss$/, use: [{ loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader', options: {includePaths: ['./node_modules']}}]}
             ]

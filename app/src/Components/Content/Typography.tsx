@@ -25,7 +25,7 @@ export default class Typography extends StyledComponent<TypographyProps, any> {
     
     render() {
         return (
-            this.props.children
+            this.props.children || ""
         );
   }
 }
