@@ -21,6 +21,11 @@
         "source": "/",
         "destination": "/portfolio",
         "type": 302
+      },
+      {
+        "source": "/portfolio/*",
+        "destination": "/portfolio",
+        "type": 302
       }
     ],
     "rewrites": [

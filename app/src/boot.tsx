@@ -4,7 +4,7 @@ import 'react-hot-loader/patch';
 import 'grommet/scss/vanilla/index.scss';
 import '@blueprintjs/core/dist/blueprint.css';
 import 'typeface-roboto';
-import 'web-animations-js/web-animations.min';
+//import 'web-animations-js/web-animations-next.min';
 //import 'stickybits/dist/stickybits';
 
 import * as React from 'react';
@@ -22,15 +22,19 @@ firebase.initializeApp(firebaseConfig);
 import App from './App';
 
 import Auth from './Services/Auth'
+import { JSONFile } from './Services/JSON';
 
 import stores from './stores';
 
+import * as Config from './Config';
+
+
 function renderApp() {
-    Auth.init().then(() => {
+    JSONFile.getData(Config.dataFile).then((data) => {
         ReactDOM.render(
             <AppContainer>
                 <Provider {...stores()}>
-                    <App />
+                    <App data={data} />
                 </Provider>
             </AppContainer>,
             document.getElementById('app')

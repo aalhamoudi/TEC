@@ -67,7 +67,6 @@ interface GalleryProps {
 
 export class Gallery extends React.Component<GalleryProps, {}> {
     render() {
-        console.log(this.props.data.map(i => ({ image: i })));
         return (
             <Box direction="column" fill="both">
                 <List template={GalleryCell} data={this.props.data.map(i => ({ image: i, data: this.props.data }))} />
@@ -166,7 +165,7 @@ export class GalleryCell extends React.Component<GalleryCellProps, {}> {
     render() {
         return (
             <Thumbnail image={this.props.item.image}>
-                <Carousel images={this.props.item.data} />
+                <Carousel />
             </Thumbnail>
         );
     }

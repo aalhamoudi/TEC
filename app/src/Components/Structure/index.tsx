@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Switch, RouteComponentProps } from 'react-router-dom';
 import { ZoomIn } from 'animate-css-styled-components';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
@@ -8,12 +9,21 @@ import ThemeProvider from '../Styles/ThemeProvider';
 import Layers from '../Layout/Layers';
 
 export { Layer } from '../Layout/Layers';
+import Animated from '../Animations/Animated';
+import CSSAnimation from '../Animations/CSSAnimation';
 
-export class App extends React.Component<{}, {}> {
+export class App extends React.Component<{ data?: any }, {}> {
+    static childContextTypes = {
+        data: PropTypes.object
+    };
+
+    getChildContext() {
+        return this.props.data
+    }
     render() {
         return (
             <Router>
-                <div>{this.props.children}</div>
+                <>{this.props.children}</>
             </Router>
         );
     };
@@ -24,20 +34,21 @@ export class Area extends React.Component<{title: string, path: string, nav?: Re
 
     render() {
         const muiTheme = createMuiTheme();
+
         return (
             <Route exact={this.props.exact || false} path={this.props.path} render={(props) => {
                 this.router = {...props};
                 return (
                     <MuiThemeProvider theme={muiTheme}>
                         <ThemeProvider theme={this.props.theme}>
-                            <div style={{width: '100%', height: '100vh'}}>
+                            <>
                                 {this.props.nav?
                                     <this.props.nav {...this.props}>
                                         {this.props.children}
                                     </this.props.nav> :
                                     this.props.children
                                 }
-                            </div>
+                            </>
                         </ThemeProvider>
                     </MuiThemeProvider>
                 );
@@ -51,19 +62,33 @@ export class Page extends React.Component<{title: string, path: string, icon?: R
         return (
             this.props.component?
             <Route exact={this.props.exact || false} path={this.props.path} component={this.props.component} /> :
-            <Route exact={this.props.exact || false} path={this.props.path} render={() => (this.props.children)} />
+                <Route exact={this.props.exact || false} path={this.props.path} render={(props) => {
+                    console.log(props);
+                    return (this.props.children);
+                }} />
         );
     };
 }
 
-export class Article extends React.Component<{animation?: React.ReactType, duration?: string}, {}> {
+export class Article extends React.Component<{ animation?: React.ReactType, duration?: string, padded?: boolean }, {}> {
+    static contextTypes: Partial<any> = {
+        offset: PropTypes.object,
+        theme: PropTypes.object,
+        rtl: PropTypes.bool
+    }
+
+    static defaultProps = {
+        padded: true
+    };
     render() {
+        let padding = this.context.theme.Components.Article.padding;
+        let boxShadow = this.context.theme.Components.Article.boxShadow;
         return (
-          <Layers>
-            {this.props.animation?
-            <this.props.animation duration={this.props.duration || "1s"}>{this.props.children}</this.props.animation> :
-            <ZoomIn duration="1s">{this.props.children}</ZoomIn>}
-          </Layers>
+            <ZoomIn style={{ padding: padding, flexGrow: 1, display: 'flex' }}>
+                <div style={{ direction: this.context.rtl && 'rtl', position: 'relative', backgroundColor: 'white', display: 'flex', flexGrow: 1, boxShadow: boxShadow, padding: this.props.padded && this.context.theme.Components.Article.contentPadding }}>
+                    {this.props.children}
+                </div>
+            </ZoomIn>
         );
     };
 }
@@ -72,7 +97,7 @@ export class Article extends React.Component<{animation?: React.ReactType, durat
 export class Section extends React.Component<{}, {}> {
     render() {
         return (
-            <div></div>
+            <div>{this.props.children}</div>
         );
     };
 }

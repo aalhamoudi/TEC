@@ -20,6 +20,10 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="src\Views\Portfolio\Local.ts">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tsconfig.json" />
     <TypeScriptCompile Include="src\App.tsx" />
     <TypeScriptCompile Include="src\Boot.tsx" />
     <TypeScriptCompile Include="src\Components\Auxiliary\Collapse.tsx" />
@@ -27,6 +31,22 @@
     <TypeScriptCompile Include="src\Components\Auxiliary\Modal.tsx" />
     <TypeScriptCompile Include="src\Components\Auxiliary\Portal.tsx" />
     <TypeScriptCompile Include="src\Components\Auxiliary\Tooltip.tsx" />
+    <TypeScriptCompile Include="src\Components\Content\Phone.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Components\Content\Social.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Components\Controls\Icon.tsx" />
+    <TypeScriptCompile Include="src\Components\Controls\Picker.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Components\Interactivity\Form.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Components\Media\Image.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\Components\Content\Typography.tsx" />
     <TypeScriptCompile Include="src\Components\Data\Carousel.tsx" />
     <TypeScriptCompile Include="src\Components\Data\List.tsx" />
@@ -42,18 +62,31 @@
     <TypeScriptCompile Include="src\Components\Navigation\NavDrawer.tsx" />
     <TypeScriptCompile Include="src\Components\Structure\index.tsx" />
     <TypeScriptCompile Include="src\Components\Styles\index.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\Themed.tsx" />
     <TypeScriptCompile Include="src\Components\Styles\Style.tsx" />
     <TypeScriptCompile Include="src\Components\Styles\Styled.tsx" />
     <TypeScriptCompile Include="src\Components\Styles\Theme.tsx" />
     <TypeScriptCompile Include="src\Components\Styles\ThemeProvider.tsx" />
+    <TypeScriptCompile Include="src\Components\Transition\PresentationArea.tsx" />
     <TypeScriptCompile Include="src\Components\Transition\ScrollingArea.tsx" />
-    <TypeScriptCompile Include="src\Components\Utility\Animations\Transition.tsx" />
+    <TypeScriptCompile Include="src\Components\Transition\SlidingPage.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Components\Animations\Animated.tsx" />
+    <TypeScriptCompile Include="src\Components\Animations\Animate.tsx" />
+    <TypeScriptCompile Include="src\Components\Animations\CSSAnimation.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Breakpoints.tsx" />
     <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Device.tsx" />
     <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Orientation.tsx" />
     <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Types.tsx" />
     <TypeScriptCompile Include="src\Components\Utility\Sticky.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Router.tsx" />
     <TypeScriptCompile Include="src\Components\Utility\Visibility\VisibilityComponent.tsx" />
+    <TypeScriptCompile Include="src\Components\Widgets\AboutWidget.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\Config.ts" />
     <Content Include="src\Images\navbrand.png" />
     <Content Include="src\Images\crescent-drive.jpg" />
@@ -66,12 +99,15 @@
     <TypeScriptCompile Include="src\Models\User.ts" />
     <TypeScriptCompile Include="src\Services\API.ts" />
     <TypeScriptCompile Include="src\Services\Auth.ts" />
+    <TypeScriptCompile Include="src\Services\JSON.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\Stores\index.ts" />
     <Content Include="src\Styles\app.css" />
     <TypeScriptCompile Include="src\Components\Utility\Stickybits.ts" />
-    <TypeScriptCompile Include="src\Components\Utility\Animations\Spring.ts" />
-    <TypeScriptCompile Include="src\Components\Utility\Animations\WebAnimations.ts" />
-    <TypeScriptCompile Include="src\Components\Utility\Visibility\isVisible.ts" />
+    <TypeScriptCompile Include="src\Components\Animations\Spring.ts" />
+    <TypeScriptCompile Include="src\Components\Animations\WebAnimations.ts" />
+    <TypeScriptCompile Include="src\Components\Utility\Visibility\Visibility.ts" />
     <TypeScriptCompile Include="src\Components\Utility\Responsive\Libraries\StateManager.ts" />
     <TypeScriptCompile Include="src\Services\Data\Collection.ts" />
     <TypeScriptCompile Include="src\Services\Data\Document.ts" />
@@ -92,28 +128,31 @@
     <TypeScriptCompile Include="src\Views\Dashboard\index.tsx" />
     <TypeScriptCompile Include="src\Views\Dashboard\Theme.tsx" />
     <TypeScriptCompile Include="src\Views\Portfolio\About.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Contact.tsx" />
+    <TypeScriptCompile Include="src\Views\Portfolio\Services.tsx" />
     <TypeScriptCompile Include="src\Views\Portfolio\Home.tsx" />
     <TypeScriptCompile Include="src\Views\Portfolio\index.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Media.tsx" />
     <TypeScriptCompile Include="src\Views\Portfolio\Press.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Projects.tsx" />
+    <TypeScriptCompile Include="src\Views\Portfolio\Media.tsx" />
     <TypeScriptCompile Include="src\Views\Portfolio\Theme.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src" />
     <Folder Include="src\Components" />
     <Folder Include="src\Components\Auxiliary" />
+    <Folder Include="src\Components\Media\" />
     <Folder Include="src\Components\Content" />
     <Folder Include="src\Components\Data" />
     <Folder Include="src\Components\Layout" />
     <Folder Include="src\Components\Navigation" />
+    <Folder Include="src\Components\Interactivity\" />
+    <Folder Include="src\Components\Controls\" />
+    <Folder Include="src\Components\Widgets\" />
     <Folder Include="src\Components\Structure" />
     <Folder Include="src\Components\Styles" />
     <Folder Include="src\Components\Transition" />
     <Folder Include="src\Components\Utility" />
-    <Folder Include="src\Components\Utility\Animations" />
-    <Folder Include="src\Components\Utility\Animations\Effects" />
+    <Folder Include="src\Components\Animations\" />
+    <Folder Include="src\Components\Animations\Effects\" />
     <Folder Include="src\Components\Utility\Responsive" />
     <Folder Include="src\Components\Utility\Responsive\Libraries" />
     <Folder Include="src\Components\Utility\Responsive\Presets" />

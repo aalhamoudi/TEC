@@ -23,3 +23,11 @@ export const firebaseConfig = {
     authDomain: 'infinitivity-f35d6.firebaseapp.com',
     projectId: 'infinitivity-f35d6'
 }
+
+export const dataFile = "/data.json";
+
+export const Images = {
+    logo: "/images/logo.png",
+    brand: "/images/brand.png",
+    about: "/images/about.png"
+};

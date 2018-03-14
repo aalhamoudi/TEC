@@ -7,13 +7,10 @@ import Portfolio from './Views/Portfolio';
 import Dashboard from './Views/Dashboard';
 import Account from './Views/Account';
 
-
-export default () => {
+export default (data) => {
     return (
-        <App>
+        <App data={data}>
             <Portfolio />
-            <Dashboard />
-            <Account />
         </App>
     );
 };

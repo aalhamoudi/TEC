@@ -1,23 +1,31 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 
-import { onVisible, VisibilityOptions } from './isVisible';
+import { Visibility, VisibilityOptions } from './Visibility';
 
 interface VisibilityComponentProps {
-  callback: () => void;
-  ref?: any;
+    onVisible: () => void;
+    onHidden?: () => void;
+  element?: any;
   options?: VisibilityOptions;
 }
 export default class VisibilityComponent extends React.Component<VisibilityComponentProps, {}> {
   ref;
 
   componentDidMount() {
-    onVisible(this.props.ref || this.ref, this.props.options, this.props.callback);
+      Visibility(this.props.element || this.ref, this.props.options, this.onVisible.bind(this), this.onHidden.bind(this));
+  }
+  onVisible() {
+      this.props.onVisible();
   }
 
+  onHidden() {
+      if (this.props.onHidden)
+          this.props.onHidden()
+  }
   render() {
     return (
-      this.props.ref? this.props.children : <div ref={ref => this.ref = ref}>{this.props.children}</div>
+        this.props.element? this.props.children : <div ref={ref => this.ref = ref}>{this.props.children}</div>
     );
   }
 }

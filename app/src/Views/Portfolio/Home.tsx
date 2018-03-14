@@ -9,32 +9,24 @@ import { Stores, PortfolioStore } from '../../Stores'
 
 import Auth from '../../Services/Auth'
 
-import { Article, Layer } from '../../Components';
-
-import Modal from '../../Components/Auxiliary/Modal';
-import Tooltip from '../../Components/Auxiliary/Tooltip';
-import Sticky from '../../Components/Utility/Sticky';
-
-import Spring from '../../Components/Utility/Animations/Spring';
+import { Article, Layer, Section } from '../../Components';
+import Box from '../../Components/Layout/Box';
+import Carousel, { Slide } from '../../Components/Data/Carousel';
 
 type PortfolioProps = PortfolioStore & RouteComponentProps<{}>;
 
 
-@inject((stores: Stores) => stores.portfolioStore)
-@observer
-export default class Home extends React.Component<PortfolioProps, {}> {
-    componentDidMount() {
-        //let spring = new Spring(0, 100, 180, 12, 10);
-        //console.log(spring.values);
-    }
 
-    public render() {
+export default class Home extends React.Component<PortfolioProps, {}> {
+    render() {
         return (
-            <Article>
-                <Layer>
-                    <div style={{height: 1500}}>Home</div>
-              </Layer>
+            <Article padded={false}>
+                <Carousel controls={false} base="animated" animation="zoomIn" exit="zoomOut">
+                    <Slide image="/images/backgrounds/home.jpg" frame={false}><img src="/images/brand.png" /></Slide>
+                    <Slide image="/images/backgrounds/home.jpg" frame={false}></Slide>
+                    <Slide image="/images/backgrounds/home.jpg" frame={false}></Slide>
+                </Carousel>
             </Article>
-        )
+        );
     }
 }

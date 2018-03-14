@@ -1,0 +1,46 @@
+[debug] [2018-03-14T16:54:53.379Z] ----------------------------------------------------------------------
+[debug] [2018-03-14T16:54:53.381Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Windows\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --only hosting
+[debug] [2018-03-14T16:54:53.381Z] CLI Version:   3.17.4
+[debug] [2018-03-14T16:54:53.381Z] Platform:      win32
+[debug] [2018-03-14T16:54:53.381Z] Node Version:  v9.6.1
+[debug] [2018-03-14T16:54:53.381Z] Time:          Wed Mar 14 2018 19:54:53 GMT+0300 (Arab Standard Time)
+[debug] [2018-03-14T16:54:53.381Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-14T16:54:53.389Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-14T16:54:53.390Z] > authorizing via signed-in user
+[debug] [2018-03-14T16:54:53.391Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/infinitivity-f35d6  
+  
+ Wed Mar 14 2018 19:54:53 GMT+0300 (Arab Standard Time)
+[debug] [2018-03-14T16:54:54.509Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T16:54:54.510Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/infinitivity-f35d6/tokens  
+  
+ Wed Mar 14 2018 19:54:54 GMT+0300 (Arab Standard Time)
+[debug] [2018-03-14T16:54:55.305Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'infinitivity-f35d6'...
+[info] 
+[info] i  deploying hosting
+[info] Running command: npm --prefix .\app run build
+[debug] [2018-03-14T16:56:36.080Z] ----------------------------------------------------------------------
+[debug] [2018-03-14T16:56:36.081Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Windows\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --only hosting
+[debug] [2018-03-14T16:56:36.081Z] CLI Version:   3.17.4
+[debug] [2018-03-14T16:56:36.081Z] Platform:      win32
+[debug] [2018-03-14T16:56:36.081Z] Node Version:  v9.6.1
+[debug] [2018-03-14T16:56:36.082Z] Time:          Wed Mar 14 2018 19:56:36 GMT+0300 (Arab Standard Time)
+[debug] [2018-03-14T16:56:36.082Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-14T16:56:36.090Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-14T16:56:36.090Z] > authorizing via signed-in user
+[debug] [2018-03-14T16:56:36.091Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/infinitivity-f35d6  
+  
+ Wed Mar 14 2018 19:56:36 GMT+0300 (Arab Standard Time)
+[debug] [2018-03-14T16:56:37.026Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-14T16:56:37.026Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/infinitivity-f35d6/tokens  
+  
+ Wed Mar 14 2018 19:56:37 GMT+0300 (Arab Standard Time)
+[debug] [2018-03-14T16:56:37.765Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'infinitivity-f35d6'...
+[info] 
+[info] i  deploying hosting
+[info] Running command: npm --prefix .\app run build

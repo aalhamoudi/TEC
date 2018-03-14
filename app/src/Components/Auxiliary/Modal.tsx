@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-
+import PropTypes from 'prop-types';
 import Portal, { PortalComponent } from './Portal';
 import Box from "../Layout/Box";
 import Typography from "../Content/Typography";
@@ -11,13 +11,26 @@ interface ModalProps {
     toggle?: () => void;
     title?: string;
   container?: PortalComponent;
-  backdrop?: boolean;
+  backgroundColor?: string;
   offsetTop?: number;
   offsetRight?: number;
   offsetBottom?: number;
   offsetLeft?: number;
 }
 export default class Modal extends React.Component<ModalProps, {}> {
+    static childContextTypes = {
+        backgroundColor: PropTypes.string,
+        toggle: PropTypes.func
+    };
+
+    getChildContext() {
+        return { backgroundColor: this.props.backgroundColor, toggle: this.props.toggle };
+    }
+
+    static defaultProps: Partial<ModalProps> = {
+        backgroundColor: 'white'
+    }
+
   render() {
       return (
           this.props.shown &&
@@ -51,9 +64,14 @@ export class ModalContainer extends StyledComponent<ModalContainerProps, {}> {
     alignItems: 'center'
   });
 
+
+  static contextTypes: Partial<any> = {
+      backgroundColor: PropTypes.string
+  }
+
   render() {
-    return (
-        <ModalFrame title={this.props.title}>{this.props.children}</ModalFrame>
+      return (
+          <ModalFrame title={this.props.title} backgroundColor={this.context.backgroundColor}>{this.props.children}</ModalFrame>
     );
   }
 }
@@ -61,16 +79,23 @@ export class ModalContainer extends StyledComponent<ModalContainerProps, {}> {
 
 interface ModalFrameProps {
     title?: string;
+    backgroundColor?: string;
 }
 @Styled<ModalFrameProps>(undefined, (props) => ({ onClick: (e) => { e.stopPropagation(); } }))
 class ModalFrame extends React.Component<ModalFrameProps, {}> {
     static style = (theme, props) => ({
-        backgroundColor: 'white',
+        backgroundColor: props.backgroundColor,
         boxShadow: "0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
         minWidth: 400,
         minHeight: 150,
         padding: 25
     });
+
+
+    static defaultProps: Partial<ModalFrameProps> = {
+        backgroundColor: 'white'
+    };
+
     render() {
         return (
             <Box direction="column">

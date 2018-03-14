@@ -15,7 +15,7 @@
         "filename": "cmd.exe",
         "arguments": "/C firebase deploy --only hosting",
         "async": true,
-        "key1": "F5",
+        "key1": "F12",
         "mod1": "CTRL SHIFT"
       }
     ]

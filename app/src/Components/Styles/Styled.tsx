@@ -9,13 +9,21 @@ export interface Style {
 }
 
 export abstract class StyledComponent<P, S> extends React.Component<P, S> {
-    static contextTypes = {
+    static contextTypes: Partial<any> = {
         theme: PropsTypes.object
     };
     static style = (theme, props): Style => ({});
 
+    fields;
+
     componentWillMount() {}
-    componentDidMount() {}
+    componentDidMount() { }
+
+    componentWillAppear() { }
+    componentWillEnter() { }
+    componentWillLeave() { }
+
+    onVisible() { }
 }
 
 interface StyledState {
@@ -30,6 +38,7 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, props?: (
             static style = (Component as any).style;
             static defaultProps: Partial<ComponentProps>;
             theme;
+            ref;
 
             normalStyle: any;
             focusStyle: any;
@@ -45,7 +54,8 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, props?: (
                 };
                 this.theme = Object.assign({}, this.context.theme, {Component: this.context.theme.Components[Component.name]});
                 delete this.theme.Components;
-                this.normalStyle = (Component as any).style(this.theme, this.props);
+                if ((Component as any).style)
+                    this.normalStyle = (Component as any).style(this.theme, this.props);
                 if (this.normalStyle) {
                     if (this.normalStyle.focus) {
                         this.focusStyle = this.normalStyle.focus;
@@ -147,10 +157,19 @@ export function Styled<ComponentProps>(tag?: string | React.ReactType, props?: (
             render() {
                 const Tag = tag || (this.props as any).tag || 'div';
 
-                let containerProps = props && props(this.props);
-                let componentProps = Object.assign({}, this.props, {theme: this.theme});
+                let containerProps, componentProps;
+                let style = {};
+                if (props) {
+                    containerProps = props(this.props);
+                    if (containerProps.style) {
+                        style = containerProps.style;
+                        delete containerProps.style;
+                    }
+                }
+                 
+                componentProps = Object.assign({}, this.props, {theme: this.theme});
                 return (
-                    <Tag style={this.getStyle()} {...containerProps}
+                    <Tag style={{ ...this.getStyle(), ...style }} {...containerProps}
                         onMouseDown={this.activeStyle && this.onMouseDown.bind(this)}
                         onMouseUp={this.activeStyle && this.onMouseUp.bind(this)}
                         onMouseEnter={this.hoverStyle && this.onMouseEnter.bind(this)}

@@ -7,12 +7,22 @@
     <title>App</title>
     <link rel="stylesheet" href="vendor.css" />
     <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <script src="http://localhost:8097"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div id="loader">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="vendor.js"></script>
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.1/web-animations-next.min.js"></script>
 </body>
 </html>

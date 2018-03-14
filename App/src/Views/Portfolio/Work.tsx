@@ -13,16 +13,14 @@ import { Article } from '../../Components';
 type PortfolioProps = PortfolioStore & RouteComponentProps<{}>;
 
 
-@inject((stores: Stores) => stores.portfolioStore)
-@observer
-export default class Contact extends React.Component<PortfolioProps, {}> {
+
+export default class Work extends React.Component<PortfolioProps, {}> {
     componentDidMount() {
     }
 
     public render() {
         return (
             <Article>
-                <Link to="/dashboard">Contact</Link>
             </Article>
         )
     }
