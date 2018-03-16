@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es6",
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "allowUnusedLabels": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
+    "declaration": true,
+    "skipDefaultLibCheck": true,
+    "lib": [ "es6", "dom" ],
+    "types": [ "webpack-env", "node" ],
+    "paths": {
+      "history": [ "./node_modules/@types/history/index" ],
+      "react": [ "./node_modules/@types/react/index" ],
+      "react-popper": [ "./node_modules/react-popper/react-popper" ]
+    },
+    "typeRoots": [
+      "./"
+    ]
+  },
+  "include": [ "src/**/*" ],
+  "exclude": [
+    "bin",
+    "node_modules"
+  ]
+}

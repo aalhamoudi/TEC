@@ -1,11 +1,4 @@
 {
-  "functions": {
-    "predeploy": [
-      "npm --prefix %RESOURCE_DIR% run lint",
-      "npm --prefix %RESOURCE_DIR% run build"
-    ],
-    "source": "Functions"
-  },
   "hosting": {
     "public": "App/dist",
     "predeploy": [
@@ -15,24 +8,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "/portfolio",
-        "type": 302
-      },
-      {
-        "source": "/portfolio/*",
-        "destination": "/portfolio",
-        "type": 302
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }

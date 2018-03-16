@@ -20,7 +20,19 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Content Include="src\Views\Portfolio\Local.ts">
+    <Content Include="src\Images\about.png" />
+    <Content Include="src\Images\backgrounds\about.jpg" />
+    <Content Include="src\Images\backgrounds\home1.jpg" />
+    <Content Include="src\Images\backgrounds\home2.jpg" />
+    <Content Include="src\Images\backgrounds\home3.jpg" />
+    <Content Include="src\Images\backgrounds\service1.jpg" />
+    <Content Include="src\Images\backgrounds\service2.jpg" />
+    <Content Include="src\Images\backgrounds\service3.jpg" />
+    <Content Include="src\Images\backgrounds\service4.jpg" />
+    <Content Include="src\Images\backgrounds\service5.jpg" />
+    <Content Include="src\Images\brand.png" />
+    <Content Include="src\Images\logo.png" />
+    <Content Include="src\Views\Local.ts">
       <SubType>Code</SubType>
     </Content>
     <Content Include="tsconfig.json" />
@@ -88,20 +100,6 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\Config.ts" />
-    <Content Include="src\Images\navbrand.png" />
-    <Content Include="src\Images\crescent-drive.jpg" />
-    <Content Include="src\Images\cloud.svg" />
-    <Content Include="src\Images\earth.svg" />
-    <Content Include="src\Images\ether.svg" />
-    <Content Include="src\Images\stars.svg" />
-    <TypeScriptCompile Include="src\Models\Item.ts" />
-    <TypeScriptCompile Include="src\Models\Project.ts" />
-    <TypeScriptCompile Include="src\Models\User.ts" />
-    <TypeScriptCompile Include="src\Services\API.ts" />
-    <TypeScriptCompile Include="src\Services\Auth.ts" />
-    <TypeScriptCompile Include="src\Services\JSON.ts">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\Stores\index.ts" />
     <Content Include="src\Styles\app.css" />
     <TypeScriptCompile Include="src\Components\Utility\Stickybits.ts" />
@@ -109,31 +107,14 @@
     <TypeScriptCompile Include="src\Components\Animations\WebAnimations.ts" />
     <TypeScriptCompile Include="src\Components\Utility\Visibility\Visibility.ts" />
     <TypeScriptCompile Include="src\Components\Utility\Responsive\Libraries\StateManager.ts" />
-    <TypeScriptCompile Include="src\Services\Data\Collection.ts" />
-    <TypeScriptCompile Include="src\Services\Data\Document.ts" />
-    <TypeScriptCompile Include="src\Services\Data\index.ts" />
-    <TypeScriptCompile Include="src\Services\Data\Model.ts" />
-    <TypeScriptCompile Include="src\Stores\Account\AccountStore.ts" />
-    <TypeScriptCompile Include="src\Stores\Dashboard\DashboardStore.ts" />
-    <TypeScriptCompile Include="src\Stores\Portfolio\PortfolioStore.ts" />
-    <TypeScriptCompile Include="src\Views\Account\Home.tsx" />
-    <TypeScriptCompile Include="src\Views\Account\index.tsx" />
-    <TypeScriptCompile Include="src\Views\Account\SignIn.tsx" />
-    <TypeScriptCompile Include="src\Views\Account\Theme.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\Admin\Home.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\Admin\index.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\Admin\Overview.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\Client\Home.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\Client\index.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\index.tsx" />
-    <TypeScriptCompile Include="src\Views\Dashboard\Theme.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\About.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Services.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Home.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\index.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Press.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Media.tsx" />
-    <TypeScriptCompile Include="src\Views\Portfolio\Theme.ts" />
+    <TypeScriptCompile Include="src\Stores\PortfolioStore.ts" />
+    <TypeScriptCompile Include="src\Views\About.tsx" />
+    <TypeScriptCompile Include="src\Views\Services.tsx" />
+    <TypeScriptCompile Include="src\Views\Home.tsx" />
+    <TypeScriptCompile Include="src\Views\index.tsx" />
+    <TypeScriptCompile Include="src\Views\Work.tsx" />
+    <TypeScriptCompile Include="src\Views\Media.tsx" />
+    <TypeScriptCompile Include="src\Views\Theme.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src" />
@@ -159,20 +140,10 @@
     <Folder Include="src\Components\Utility\Visibility" />
     <Folder Include="src\Components\View" />
     <Folder Include="src\Images" />
-    <Folder Include="src\Models" />
-    <Folder Include="src\Services" />
-    <Folder Include="src\Services\Data" />
+    <Folder Include="src\Images\backgrounds\" />
     <Folder Include="src\Stores" />
-    <Folder Include="src\Stores\Account" />
-    <Folder Include="src\Stores\Dashboard" />
-    <Folder Include="src\Stores\Portfolio" />
     <Folder Include="src\Styles" />
     <Folder Include="src\Views" />
-    <Folder Include="src\Views\Account" />
-    <Folder Include="src\Views\Dashboard" />
-    <Folder Include="src\Views\Dashboard\Admin" />
-    <Folder Include="src\Views\Dashboard\Client" />
-    <Folder Include="src\Views\Portfolio" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->

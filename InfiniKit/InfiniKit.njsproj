@@ -1,0 +1,168 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>InfiniKit</Name>
+    <RootNamespace>InfiniKit</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>39708e9c-88ea-4043-a075-73a0ea396399</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <TypeScriptCompile Include="src\Components\Animations\Animate.tsx" />
+    <TypeScriptCompile Include="src\Components\Animations\Animated.tsx" />
+    <TypeScriptCompile Include="src\Components\Animations\CSSAnimation.tsx" />
+    <TypeScriptCompile Include="src\Components\Animations\Spring.ts" />
+    <TypeScriptCompile Include="src\Components\Animations\WebAnimations.ts" />
+    <TypeScriptCompile Include="src\Components\Auxiliary\Collapse.tsx" />
+    <TypeScriptCompile Include="src\Components\Auxiliary\Drawer.tsx" />
+    <TypeScriptCompile Include="src\Components\Auxiliary\Modal.tsx" />
+    <TypeScriptCompile Include="src\Components\Auxiliary\Portal.tsx" />
+    <TypeScriptCompile Include="src\Components\Auxiliary\Tooltip.tsx" />
+    <TypeScriptCompile Include="src\Components\Content\Copyright.tsx" />
+    <TypeScriptCompile Include="src\Components\Content\Phone.tsx" />
+    <TypeScriptCompile Include="src\Components\Content\Social.tsx" />
+    <TypeScriptCompile Include="src\Components\Content\Typography.tsx" />
+    <TypeScriptCompile Include="src\Components\Controls\Icon.tsx" />
+    <TypeScriptCompile Include="src\Components\Controls\Picker.tsx" />
+    <TypeScriptCompile Include="src\Components\Data\Carousel.tsx" />
+    <TypeScriptCompile Include="src\Components\Data\List.tsx" />
+    <TypeScriptCompile Include="src\Components\Interactivity\Form.tsx" />
+    <TypeScriptCompile Include="src\Components\Layout\Box.tsx" />
+    <TypeScriptCompile Include="src\Components\Layout\Centered.tsx" />
+    <TypeScriptCompile Include="src\Components\Layout\Grid.tsx" />
+    <TypeScriptCompile Include="src\Components\Layout\Layers.tsx" />
+    <TypeScriptCompile Include="src\Components\Layout\Split.tsx" />
+    <TypeScriptCompile Include="src\Components\Media\Image.tsx" />
+    <TypeScriptCompile Include="src\Components\Navigation\IconBar.tsx" />
+    <TypeScriptCompile Include="src\Components\Navigation\index.tsx" />
+    <TypeScriptCompile Include="src\Components\Navigation\NavBar.tsx" />
+    <TypeScriptCompile Include="src\Components\Navigation\NavDrawer.tsx" />
+    <TypeScriptCompile Include="src\Components\Structure\index.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\index.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\Style.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\Styled.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\Theme.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\Themed.tsx" />
+    <TypeScriptCompile Include="src\Components\Styles\ThemeProvider.tsx" />
+    <TypeScriptCompile Include="src\Components\Transition\PresentationArea.tsx" />
+    <TypeScriptCompile Include="src\Components\Transition\ScrollingArea.tsx" />
+    <TypeScriptCompile Include="src\Components\Transition\SlidingPage.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Responsive\Libraries\StateManager.ts" />
+    <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Breakpoints.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Device.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Orientation.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Responsive\Presets\Types.tsx" />
+    <TypeScriptCompile Include="src\Components\Widgets\AboutWidget.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Router.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Sticky.tsx" />
+    <TypeScriptCompile Include="src\Components\Utility\Visibility\Visibility.ts" />
+    <TypeScriptCompile Include="src\Components\Utility\Visibility\VisibilityComponent.tsx" />
+    <TypeScriptCompile Include="src\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Libraries\API.ts" />
+    <TypeScriptCompile Include="src\Libraries\Auth.ts" />
+    <TypeScriptCompile Include="src\Libraries\Data\Collection.ts" />
+    <TypeScriptCompile Include="src\Libraries\Data\Document.ts" />
+    <TypeScriptCompile Include="src\Libraries\Data\index.ts" />
+    <TypeScriptCompile Include="src\Libraries\Data\Model.ts" />
+    <TypeScriptCompile Include="src\Libraries\JSON.ts" />
+    <TypeScriptCompile Include="webpack.config.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist\" />
+    <Folder Include="src\Components\" />
+    <Folder Include="src\Components\Animations\" />
+    <Folder Include="src\Components\Animations\Effects\" />
+    <Folder Include="src\Components\Auxiliary\" />
+    <Folder Include="src\Components\Content\" />
+    <Folder Include="src\Components\Controls\" />
+    <Folder Include="src\Components\Data\" />
+    <Folder Include="src\Components\Interactivity\" />
+    <Folder Include="src\Components\Layout\" />
+    <Folder Include="src\Components\Media\" />
+    <Folder Include="src\Components\Navigation\" />
+    <Folder Include="src\Components\Structure\" />
+    <Folder Include="src\Components\Styles\" />
+    <Folder Include="src\Components\Transition\" />
+    <Folder Include="src\Components\Utility\" />
+    <Folder Include="src\Components\Utility\Responsive\" />
+    <Folder Include="src\Components\Utility\Responsive\Libraries\" />
+    <Folder Include="src\Components\Utility\Responsive\Presets\" />
+    <Folder Include="src\Components\Widgets\" />
+    <Folder Include="src\Components\Utility\Visibility\" />
+    <Folder Include="src\Libraries\" />
+    <Folder Include="src\Libraries\Data\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,16 +1,14 @@
 import * as React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { App, Area } from './Components/Structure';
+import { App, Area } from 'infinikit/Components/Structure';
 
-import Portfolio from './Views/Portfolio';
-import Dashboard from './Views/Dashboard';
-import Account from './Views/Account';
+import TEC from './Views/';
 
 export default (data) => {
     return (
         <App data={data}>
-            <Portfolio />
+            <TEC />
         </App>
     );
 };
