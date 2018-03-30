@@ -106,10 +106,10 @@ export default class Carousel extends React.Component<CarouselProps, {currentSli
                 </Layer>
                 <Layer top={0} right={0} bottom={0} left={0}>
                     <Box direction="column" fill="both">
-                        {this.props.title && <Box fill="width" justify="center" background="rgba(0, 0, 0, 0.5)" position="absolute" top="5%"><h1 style={{ color: 'white', margin: 15 }}>{this.props.title}</h1></Box>}
+                        {this.props.title && <Box fill="width" justify="center" background="rgba(0, 0, 0, 0.5)" position="absolute" top={screen.width > 768? '10%' : '2.5%'}><h1 style={{ color: 'white', margin: screen.width > 768? 15 : 5 }}>{this.props.title}</h1></Box>}
                         <Box direction="column" justify="flex-end" fill="width" position="absolute" bottom={0}>
                             {this.props.controls &&
-                                <Box justify="space-between" align="stretch">
+                                <Box justify="space-between" align="stretch" margin={screen.width > 768? 0 : '-15px 0'}>
                                     <PrevIcon style={iconStyle} onClick={this.previous.bind(this)} />
                                     {this.state.playing ? <PauseIcon style={iconStyle} onClick={this.togglePlay.bind(this)} /> : <PlayIcon style={iconStyle} onClick={this.togglePlay.bind(this)} />}
                                     <NextIcon style={iconStyle} onClick={this.next.bind(this)} />
@@ -157,7 +157,7 @@ export class Slide extends React.Component<SlideProps, {}> {
                 <Layer>
                     <CSSAnimation lazy unmount shown={this.props.shown} appear={this.props.appear}
                         base={this.props.base} animation={this.props.animation} enter={this.props.enter} exit={this.props.exit}>
-                        <div style={{ color: 'black', fontSize: '1.5em', backgroundColor: (this.props.frame && (this.props.background || 'rgba(255, 255, 255, 0.25)')), padding: 20, maxWidth: screen.width > 768 ? "50%" : "80%" }}>
+                        <div style={{ color: 'black', fontSize: '1.5em', backgroundColor: (this.props.frame && (this.props.background || 'rgba(255, 255, 255, 0.25)')), padding: 15, margin: 5, maxWidth: screen.width > 768 ? "50%" : "90%" }}>
                             {this.props.title && <h3>{this.props.title}</h3>}
                             <p style={{ display: 'flex', justifyContent: 'center', margin: 0 }}>{this.props.children}</p>
                         </div>
