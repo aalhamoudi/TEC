@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import { Article } from 'infinikit/Components/';
-import AboutWidget from 'infinikit/Components//Widgets/AboutWidget';
+import { Article } from 'InfiniKit/Components/';
+import AboutWidget from 'InfiniKit/Components//Widgets/AboutWidget';
 
 import { Language } from '../Resources/Local';
 import * as AboutBg from '../Images/backgrounds/about.jpg';

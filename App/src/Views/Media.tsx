@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Article } from 'infinikit/Components/';
-import List, { FilteredList, ThumbnailGalleryCell } from 'infinikit/Components//Data/List';
+import { Article } from 'InfiniKit/Components/';
+import List, { FilteredList, ThumbnailGalleryCell } from 'InfiniKit/Components/Data/List';
 
 
 export default class Media extends React.Component<{}, {}> {

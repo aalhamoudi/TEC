@@ -13,7 +13,7 @@ export interface AboutWidgetProps {
 export default class AboutWidget extends React.Component<AboutWidgetProps, {}> {
     render() {
         return (
-            <Box fill="both" justify="flex-start" padding={20} align="center" image={this.props.background} direction={screen.width > 768 ? 'row' : 'column'}>
+            <Box fill="both" justify="flex-start" padding={0} align="center" image={this.props.background} direction={screen.width > 768 ? 'row' : 'column'}>
                 <Box direction='column' background="white" padding={10} opacity={0.8}>
                     <h1 style={{margin: 15}}>{this.props.title}</h1>
                     <div style={{maxWidth: 250}}>{this.props.children}</div>

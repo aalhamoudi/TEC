@@ -5,13 +5,15 @@ import Portal, { PortalComponent } from './Portal';
 import Box from "../Layout/Box";
 import Typography from "../Content/Typography";
 import { Styled, StyledComponent, Style } from "../Styles/Styled";
+import Layers, { Layer } from '../Layout/Layers';
 
 export interface ModalProps {
     shown: boolean;
     toggle?: () => void;
     title?: string;
   container?: PortalComponent;
-  backgroundColor?: string;
+    backdrop?: boolean;
+    backgroundColor?: string;
   offsetTop?: number;
   offsetRight?: number;
   offsetBottom?: number;
@@ -28,7 +30,8 @@ export default class Modal extends React.Component<ModalProps, {}> {
     }
 
     static defaultProps: Partial<ModalProps> = {
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        backdrop: true
     }
 
   render() {
@@ -45,7 +48,8 @@ export interface ModalContainerProps {
     toggle?: () => void;
     title?: string;
   backdrop?: boolean;
-  offsetTop?: number;
+    backdropColor?: string;
+    offsetTop?: number;
   offsetRight?: number;
   offsetBottom?: number;
   offsetLeft?: number;
@@ -64,18 +68,53 @@ export class ModalContainer extends StyledComponent<ModalContainerProps, {}> {
     alignItems: 'center'
   });
 
-
+    static defaultProps: Partial<ModalContainerProps> = {
+        backdrop: true
+    };
   static contextTypes: Partial<any> = {
-      backgroundColor: PropTypes.string
+      backgroundColor: PropTypes.string,
   }
 
   render() {
       return (
-          <ModalFrame title={this.props.title} backgroundColor={this.context.backgroundColor}>{this.props.children}</ModalFrame>
+          <Layers id="ModalContaier">
+              {true && <Layer><ModalBackdrop color={this.props.backdropColor} {...this.props}/></Layer>}
+              <Layer><ModalFrame title={this.props.title} backgroundColor={this.context.backgroundColor}>{this.props.children}</ModalFrame></Layer>
+          </Layers>
     );
   }
 }
 
+export interface ModalBackdropProps {
+    toggle?: () => void;
+    color?: string;
+    offsetTop?: number;
+    offsetRight?: number;
+    offsetBottom?: number;
+    offsetLeft?: number;
+}
+@Styled<ModalBackdropProps>(undefined, (props) => ({ onClick: (e) => { e.stopPropagation(); } }))
+class ModalBackdrop extends React.Component<ModalBackdropProps, {}> {
+    static style = (theme, props) => ({
+        backgroundColor: props.color || 'rgba(0, 0, 0, 0.5)',
+        position: 'absolute',
+        top: props.offsetTop | 0,
+        right: props.offsetRight | 0,
+        bottom: props.offsetBottom | 0,
+        left: props.offsetLeft | 0,
+    });
+
+
+    static defaultProps: Partial<ModalBackdropProps> = {
+        color: 'rgba(0, 0, 0, 0.5)'
+    };
+
+    render() {
+        return (
+            <div style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}} onClick={this.props.toggle}></div>
+        );
+    }
+}
 
 export interface ModalFrameProps {
     title?: string;
@@ -98,7 +137,7 @@ class ModalFrame extends React.Component<ModalFrameProps, {}> {
 
     render() {
         return (
-            <Box direction="column">
+            <Box direction="column" padding={25}>
                 {this.props.title && <ModalHeader title={this.props.title} />}
                 <ModalContent>{this.props.children}</ModalContent>
             </Box>

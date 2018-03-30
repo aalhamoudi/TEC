@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Article, Layer, Section } from 'infinikit/Components/';
-import Carousel, { Slide } from 'infinikit/Components/Data/Carousel';
+import { Article, Layer, Section } from 'InfiniKit/Components/';
+import Carousel, { Slide } from 'InfiniKit/Components/Data/Carousel';
 
 import { Language } from '../Resources/Local';
 import * as Service1 from '../Images/backgrounds/service1.jpg';

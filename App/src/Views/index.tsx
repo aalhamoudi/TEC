@@ -4,10 +4,9 @@ import { inject, observer } from 'mobx-react'
 import { Route, RouteComponentProps } from 'react-router-dom';
 
 
-import { Area, Page } from 'infinikit/Components/Structure';
-import { PresentationArea, Header, Content, Footer } from 'infinikit/Components/Transition/PresentationArea';
-import { ScrollingArea } from 'infinikit/Components/Transition/ScrollingArea';
-import { NavBarNavigation } from 'infinikit/Components/Navigation/NavBar';
+import { Area, Page } from 'InfiniKit/Components/Structure';
+import { ScrollingArea } from 'InfiniKit/Components/Transition/ScrollingArea';
+import { NavBarNavigation } from 'InfiniKit/Components/Navigation/NavBar';
 
 import HomeIcon from 'material-ui-icons/Home';
 import ServicesIcon from 'material-ui-icons/FolderOpen';

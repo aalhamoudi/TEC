@@ -17,10 +17,8 @@ module.exports = (env) => {
         },
         entry: {
             vendor: [
-                'material-ui',
-                'grommet/scss/vanilla/index.scss',
+
                 'event-source-polyfill',
-                '@blueprintjs/core',
                 'history',
                 'firebase',
                 'react',
@@ -30,7 +28,6 @@ module.exports = (env) => {
                 'font-awesome/css/font-awesome.css',
                 'animate.css/animate.min.css',
                 'web-animations-js/web-animations.min',
-                'stickybits/dist/stickybits'
             ],
         },
         module: {

@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
+const TsConfigPathsPlugin = require('awesome-typescript-loader').TsConfigPathsPlugin;
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
@@ -10,7 +11,12 @@ module.exports = (env) => {
 
     return {
         stats: { modules: false },
-        resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+        resolve: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'] ,
+            plugins: [
+                new TsConfigPathsPlugin()
+            ]
+        },
         entry: {
             'app': './src/Boot.tsx'
         },

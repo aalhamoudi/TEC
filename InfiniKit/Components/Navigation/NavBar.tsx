@@ -115,7 +115,7 @@ export interface NavMenuContentProps {
 export class NavMenuContent extends React.Component<NavMenuContentProps, {}> {
     static contextTypes = {
         toggle: PropTypes.func,
-        scrollToContent: PropTypes.funct
+        scrollToContent: PropTypes.func
     };
 
     onToggle() {
@@ -247,7 +247,7 @@ export class NavLink extends StyledComponent<NavLinkProps, {}> {
     };
 
     render() {
-        return <Link exact to={this.props.path} style={{ display: 'flex', alignItems: 'center', height: 50, padding: 15 }} activeStyle={{ backgroundColor: "#111", borderTop: "1px solid white" }}>
+        return <Link exact to={this.props.path} style={{ display: 'flex', alignItems: 'center', height: 50, padding: '0 15px' }} activeStyle={{ backgroundColor: "#111", borderTop: "1px solid white" }}>
             {this.props.icon && <this.props.icon style={{ margin: "0 0px 0 0" }} />}
             <span style={{ margin: '0 5px' }}>{this.props.title}</span>
         </Link>

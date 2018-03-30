@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { App, Area } from 'infinikit/Components/Structure';
+import { App, Area } from 'InfiniKit/Components/Structure';
 
 import TEC from './Views/';
 

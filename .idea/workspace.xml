@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26922df3-3aa6-41e5-b021-ca843465e610" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/TEC/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TEC/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.njsproj" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.njsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Resources/Theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Resources/Theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Views/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Views/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Views/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Views/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Views/Media.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Views/Media.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Views/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Views/Services.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Views/Work.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Views/Work.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/Views/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/Views/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/webpack.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniKit/Components/Auxiliary/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniKit/Components/Auxiliary/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniKit/Components/Data/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniKit/Components/Data/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniKit/Components/Layout/Layers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniKit/Components/Layout/Layers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniKit/Components/Navigation/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniKit/Components/Navigation/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniKit/Components/Widgets/AboutWidget.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniKit/Components/Widgets/AboutWidget.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniKit/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniKit/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/app/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dist/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/dist/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dist/app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/dist/app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/boot.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/boot.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Carousel.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Data/Carousel.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1184">
+              <caret line="94" column="76" selection-start-line="94" selection-start-column="76" selection-end-line="94" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Modal.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Auxiliary/Modal.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1199">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Layers.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Layout/Layers.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavBar.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Navigation/NavBar.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="About.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/src/Views/About.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutWidget.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Widgets/AboutWidget.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.tsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/src/Views/Home.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="24" column="192" selection-start-line="24" selection-start-column="192" selection-end-line="24" selection-end-column="192" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Theme.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/src/Resources/Theme.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>vendor_2451ae5964035f17fb86</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/App/src/App.tsx" />
+        <option value="$PROJECT_DIR$/App/src/Views/Services.tsx" />
+        <option value="$PROJECT_DIR$/App/src/Views/Work.tsx" />
+        <option value="$PROJECT_DIR$/App/src/Views/Media.tsx" />
+        <option value="$PROJECT_DIR$/App/src/Views/About.tsx" />
+        <option value="$PROJECT_DIR$/App/src/Views/index.tsx" />
+        <option value="$PROJECT_DIR$/App/tsconfig.json" />
+        <option value="$PROJECT_DIR$/InfiniKit/package.json" />
+        <option value="$PROJECT_DIR$/App/.babelrc" />
+        <option value="$PROJECT_DIR$/App/server.js" />
+        <option value="$PROJECT_DIR$/App/package.json" />
+        <option value="$PROJECT_DIR$/App/webpack.config.vendor.js" />
+        <option value="$PROJECT_DIR$/App/src/Boot.tsx" />
+        <option value="$PROJECT_DIR$/App/webpack.config.js" />
+        <option value="$PROJECT_DIR$/App/dist/index.html" />
+        <option value="$PROJECT_DIR$/App/src/Resources/Theme.ts" />
+        <option value="$PROJECT_DIR$/InfiniKit/Components/Data/Carousel.tsx" />
+        <option value="$PROJECT_DIR$/InfiniKit/Components/Layout/Layers.tsx" />
+        <option value="$PROJECT_DIR$/InfiniKit/Components/Auxiliary/Modal.tsx" />
+        <option value="$PROJECT_DIR$/InfiniKit/Components/Navigation/NavBar.tsx" />
+        <option value="$PROJECT_DIR$/InfiniKit/Components/Widgets/AboutWidget.tsx" />
+        <option value="$PROJECT_DIR$/App/src/Views/Home.tsx" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/App/node_modules" />
+    <handled-path value="$PROJECT_DIR$/InfiniKit/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="InfiniKit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="InfiniKit" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="InfiniKit" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Auxiliary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="InfiniKit" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEC" type="462c0819:PsiDirectoryNode" />
+              <item name="InfiniKit" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="9.6.1" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="node.js.selected.package.tslint" value="C:\Users\Windows\AppData\Roaming\npm\node_modules\tslint" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/InfiniKit/node_modules/typescript/lib" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26922df3-3aa6-41e5-b021-ca843465e610" name="Default" comment="" />
+      <created>1522420582887</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522420582887</updated>
+      <workItem from="1522420586324" duration="9746000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9746000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info active="true" anchor="right" id="Remote Host" visible="true" weight="0.3296875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/App/webpack.config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/App/src/Views/Services.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Views/Work.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Views/Media.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Views/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfiniKit/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="74" column="3" selection-start-line="74" selection-start-column="3" selection-end-line="74" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/dist/vendor-manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret column="1762" selection-start-column="1762" selection-end-column="1762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/webpack.config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/webpack.config.vendor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="29" selection-start-line="22" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Boot.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Resources/Theme.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Layout/Layers.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Auxiliary/Modal.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1199">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Navigation/NavBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Views/About.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Widgets/AboutWidget.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfiniKit/Components/Data/Carousel.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1184">
+          <caret line="94" column="76" selection-start-line="94" selection-start-column="76" selection-end-line="94" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/src/Views/Home.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="192" selection-start-line="24" selection-start-column="192" selection-end-line="24" selection-end-column="192" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

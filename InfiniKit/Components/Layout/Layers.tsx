@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Styled, StyledComponent, Style } from "../Styles/Styled";
 
 export interface LayersProps {
+    id?: string;
     style?: any;
 }
 export default class Layers extends React.Component<LayersProps, {}> {
@@ -22,7 +23,7 @@ export default class Layers extends React.Component<LayersProps, {}> {
   render() {
       let style = this.props.style ? { ...this.style, ...this.props.style } : this.style;
       return (
-          <div style={style}>
+          <div id={this.props.id || ""} style={style}>
               {React.Children.map(this.props.children, (child, index) => {
                   let layer = child as any;
                   return <InternalLayer key={index} parentIndex={this.context.index || 0} index={index} center={layer.props.center}
