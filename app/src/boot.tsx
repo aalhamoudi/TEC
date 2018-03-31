@@ -2,7 +2,7 @@ import './styles/app.css';
 //import 'font-awesome/css/font-awesome.css';
 import 'react-hot-loader/patch';
 import 'typeface-roboto';
-
+import 'animate.css/animate.min.css';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
